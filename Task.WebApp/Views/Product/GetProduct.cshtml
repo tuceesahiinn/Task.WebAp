@@ -1,0 +1,54 @@
+﻿@using Task.WebApp.Models.Entity
+@model List<Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ürünler</h2>
+
+
+<div class="row">
+
+    @foreach (var pr in Model)
+    {
+        <div class="col-md-12 col-lg-4 col-sm-3 mb-3">
+            <div class="card">
+                <div class="card-columns">
+                    <div class="column">
+                        <div class="card">
+                            <img class="card-img-top" src="..\Content\no-product-image.png" alt="Card image cap">
+                            <div class="card-header">
+                                <h5 class="card-title">Ürün Adı: @pr.Name</h5>
+                                <p class="card-subtitle">Kategori Adı: @pr.Category.Name</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-link">Ürün Fiyatı: @pr.Price</p>
+                                <a href="/Product/GetProductDetail/@pr.Id" class="card-link"><button style="background-color:green;color:white;">Ürün Detayı</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="leftbar">
+    @Html.Action("GetNewProduct", "Product")
+</div>
+<style>
+    .leftbar {
+        height: 100%;
+        width: 240px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #808080;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+</style>
+
+

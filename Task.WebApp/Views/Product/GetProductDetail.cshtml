@@ -1,0 +1,46 @@
+﻿@model  Task.WebApp.Models.Entity.Product
+
+@{
+    ViewBag.Title = "GetProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<html>
+<head>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 500;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center">Ürün Detay Sayfası</h2>
+
+    <div class="card">
+        <img src="~/Content/no-product-image.png" style="width:100%">
+        <h1> @Model.Name</h1>
+        <p class="price"> @Model.Price</p>
+        <p>@Model.Category.Name</p>
+        
+
+    </div>
+
+</body>
+</html>
+
+
+

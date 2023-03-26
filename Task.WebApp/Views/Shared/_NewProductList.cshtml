@@ -1,0 +1,11 @@
+﻿
+@using Task.WebApp.Models.Entity
+@model List<Product>
+
+<h3>Yeni Ürünler</h3>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name</li>
+    }
+</ul>

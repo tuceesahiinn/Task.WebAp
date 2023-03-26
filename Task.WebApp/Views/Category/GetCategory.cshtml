@@ -1,0 +1,38 @@
+﻿@using Task.WebApp.Models.Entity
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kategoriler</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KATEGORİ ADI</th>
+    </tr>
+    @foreach (var ctg in Model)
+    {
+        <tr>
+            <td>@ctg.Id</td>
+            <td>@ctg.Name</td>
+        </tr>
+    }
+
+</table>
+<div class="leftbar">
+    @Html.Action("GetNewProduct", "Product")
+</div>
+<style>
+    .leftbar {
+        height: 100%;
+        width: 240px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #808080;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+</style>
