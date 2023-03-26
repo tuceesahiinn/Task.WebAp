@@ -8,7 +8,7 @@
 
 ![KategoriSayfası](https://user-images.githubusercontent.com/61552997/227811540-a557f725-5d64-465d-88b1-0777169acb22.png)
 
-###Ürün Detay Sayfası
+### Ürün Detay Sayfası
 
 ![Üründetaysayfası](https://user-images.githubusercontent.com/61552997/227811541-ac567dd5-582b-4f6c-bccd-f4c9e5b2c388.png)
 
